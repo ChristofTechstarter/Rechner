@@ -7,7 +7,7 @@ def dezimal_to_hex(x):
 
 
 def bin_to_dezimal(x):
-    return int(x, 2)
+    return int(x)
 
 
 def bin_to_hex(x):
@@ -16,7 +16,7 @@ def bin_to_hex(x):
 
 
 def hex_to_dezimal(x):
-    return int(x, 16)
+    return int(x)
 
 
 def hex_to_bin(x):
@@ -43,25 +43,31 @@ def zahlensystem():
                 zahl1 = int(input("Geben Sie eine Zahl ein: "))
 
                 if auswahl == 1:
-                    print(f"{zahl1} entspricht: {dezimal_to_bin(zahl1)}")
+                    print("Dezimal in Binär:")
+                    print(f"{zahl1} entspricht: {dezimal_to_bin(zahl1).replace("0b", "")}")
                 elif auswahl == 2:
-                    print(f"{zahl1} entspricht: {dezimal_to_hex(zahl1)}")
+                    print("Dezimal in Hex: ")
+                    print(f"{zahl1} entspricht: {dezimal_to_hex(zahl1).replace("0x", "")}")
             elif auswahl in [3, 4]:
 
                 zahl1 = int(input("Geben Sie eine Zahl ein: "), 2)
 
                 if auswahl == 3:
-                    print(f"{bin(zahl1)} entspricht: {bin_to_dezimal(zahl1)}")
+                    print("Binär in Dezimal: ")
+                    print(f"{bin(zahl1).replace("0b", "")} entspricht: {bin_to_dezimal(zahl1)}")
                 elif auswahl == 4:
-                    print(f"{bin(zahl1)} entspricht: {bin_to_hex(zahl1)}")
+                    print("Binär in Hex: ")
+                    print(f"{bin(zahl1).replace("0b", "")} entspricht: {bin_to_hex(zahl1).replace("0x", "")}")
             elif auswahl in [5, 6]:
 
                 zahl1 = int(input("Geben Sie eine Zahl ein: "), 16)
 
                 if auswahl == 5:
-                    print(f"{hex(zahl1)} entspricht: {hex_to_dezimal(zahl1)}")
+                    print("Hex in Dezimal: ")
+                    print(f"{hex(zahl1).replace("0x", "")} entspricht: {hex_to_dezimal(zahl1)}")
                 elif auswahl == 6:
-                    print(f"{hex(zahl1)} entspricht: {hex_to_bin(zahl1)}")
+                    print("Hex in Binär: ")
+                    print(f"{hex(zahl1).replace("0x", "")} entspricht: {hex_to_bin(zahl1).replace("0b", "")}")
             elif auswahl == 7:
                 break
             else:
