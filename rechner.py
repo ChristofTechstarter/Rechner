@@ -2,6 +2,7 @@ import Skripte.grundrechenarten
 import Skripte.winkelfunktionen
 import Skripte.temperaturrechner
 import Skripte.streckenumrechnung
+import Skripte.flächeninhaltrechner
 
 
 while True:
@@ -11,10 +12,11 @@ while True:
     print("(2) Winkelfunktionen")
     print("(3) Temperaturrechner")
     print("(4) Streckenumrechner")
-    print("(5) Programm beenden")
+    print("(5) Flächeninhaltsrechner")
+    print("(6) Programm beenden")
     try:
 
-        auswahl = int(input("\nBitte wählen Sie Ihre Operation aus (1-5): "))
+        auswahl = int(input("\nBitte wählen Sie Ihre Operation aus (1-6): "))
         # Grundrechenarten
         if auswahl == 1:
             Skripte.grundrechenarten.grundrechenarten()
@@ -24,13 +26,18 @@ while True:
         # Temperaturrechner
         elif auswahl == 3:
             Skripte.temperaturrechner.temperraturrechnung()
+        # Streckenumrechner
         elif auswahl == 4:
             Skripte.streckenumrechnung.streckenumrechnung()
+        # Flächeninhaltsrechner
         elif auswahl == 5:
-            print(f"Der Rechner wird beendet. Auf Wiedersehen!")
+            Skripte.flächeninhaltrechner.flächeninhalt()
+        # Beenden des Programmes
+        elif auswahl == 6:
+            print(f"Der Rechner wird beendet.")
             break
         else:
-            print(f"Ungültige Auswahl. Bitte wählen Sie eine Option zwischen 1 und 5.")
+            print(f"Ungültige Auswahl. Bitte wählen Sie eine Option zwischen 1 und 6.")
 
     except ValueError:
         print(f"Ungültige Eingabe. Bitte geben Sie eine Zahl ein.")
