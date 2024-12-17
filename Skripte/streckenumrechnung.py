@@ -6,7 +6,7 @@ def miles_to_km(m):
     return m / float(0.621371)
 
 
-def winkelfunktion():
+def streckenumrechnung():
 
     while True:
 
