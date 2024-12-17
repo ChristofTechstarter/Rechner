@@ -1,2 +1,2 @@
 # Rechner
-In diesem Repro präsentieren ich mein eigenen erstellten Rechner.
+In diesem Repro präsentiere ich meinen selbst erstellten Rechner.
