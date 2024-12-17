@@ -1,19 +1,5 @@
 import Skripte.grundrechenarten
-
-
-import math
-
-
-def sinus(x):
-    return math.sin(math.radians(x))
-
-
-def cos(x):
-    return math.cos(math.radians(x))
-
-
-def tan(x):
-    return math.tan(math.radians(x))
+import Skripte.winkelfunktionen
 
 
 def celsius_to_fahrenheit(x):
@@ -31,15 +17,6 @@ def calculator():
     print("(2) Winkelfunktionen")
     print("(3) Temperaturrechner")
     print("(4) Programm beenden")
-
-
-def winkelfunktionen():
-    print("\nWinkelfunktionen")
-    print("Bitte wählen Sie eine der folgenden Optionen aus:")
-    print("(1) Sinusfunktion")
-    print("(2) Kosinusfunktion")
-    print("(3) Tangensfunktion")
-    print("(4) Zurück")
 
 
 def temperaturrechner():
@@ -60,30 +37,7 @@ while True:
             Skripte.grundrechenarten.grundrechenarten()
         # Winkelfunktionen
         elif auswahl == 2:
-            while True:
-                winkelfunktionen()
-                try:
-                    auswahl = int(
-                        input("\nBitte wählen Sie Ihre Operation aus (1-4): ")
-                    )
-                    if auswahl in [1, 2, 3]:
-
-                        zahl1 = float(input("Geben Sie eine Zahl ein: "))
-
-                        if auswahl == 1:
-                            print(f"Das Ergebnis der Sinusfunktion ist: {sinus(zahl1)}")
-                        elif auswahl == 2:
-                            print(f"Das Ergebnis der Kosinusfunktion ist: {cos(zahl1)}")
-                        elif auswahl == 3:
-                            print(f"Das Ergebnis der Tangensfunktion ist: {tan(zahl1)}")
-                    elif auswahl == 4:
-                        break
-                    else:
-                        print(
-                            f"Ungültige Auswahl. Bitte wählen Sie eine Option zwischen 1 und 4."
-                        )
-                except ValueError:
-                    print(f"Ungültige Eingabe. Bitte geben Sie eine Zahl ein.")
+            Skripte.winkelfunktionen.winkelfunktion()
         # Temperaturrechner
         elif auswahl == 3:
             while True:
